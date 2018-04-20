@@ -1557,22 +1557,6 @@
 			}
 
 		}
-		if ( BindPoseNode ) {
-
-			var PoseNode = BindPoseNode.subNodes.PoseNode;
-			var worldMatrices = new Map();
-
-			for ( var PoseNodeIndex = 0, PoseNodeLength = PoseNode.length; PoseNodeIndex < PoseNodeLength; ++ PoseNodeIndex ) {
-
-				var node = PoseNode[ PoseNodeIndex ];
-
-				var rawMatWrd = parseMatrixArray( node.subNodes.Matrix.properties.a );
-
-				worldMatrices.set( parseInt( node.id ), rawMatWrd );
-
-			}
-
-		}
 
 		for ( var FBX_ID in deformers ) {
 
